@@ -43,6 +43,7 @@ impl ScriptType {
                 .starts_with("application/json;")
             || type_value.eq_ignore_ascii_case("application/ld+json")
             || type_value.to_ascii_lowercase().ends_with("+json")
+            || type_value.eq_ignore_ascii_case("speculationrules")
         {
             Self::JSON
         } else {
